@@ -10,6 +10,6 @@ class VogaisPagina extends StatefulWidget {
 class _VogaisPaginaState extends State<VogaisPagina> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold();
   }
 }

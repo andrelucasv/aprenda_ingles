@@ -10,6 +10,6 @@ class BichosPagina extends StatefulWidget {
 class _BichosPaginaState extends State<BichosPagina> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold();
   }
 }

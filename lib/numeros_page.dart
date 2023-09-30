@@ -10,6 +10,6 @@ class NumerosPagina extends StatefulWidget {
 class _NumerosPaginaState extends State<NumerosPagina> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold();
   }
 }

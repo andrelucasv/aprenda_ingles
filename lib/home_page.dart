@@ -35,10 +35,17 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
         title: const Text("Aprenda inglês"),
-        backgroundColor: Colors.brown,
+        backgroundColor: Theme.of(context).primaryColor,
         bottom: TabBar(
+          indicatorWeight: 4,
+          indicatorColor: Colors.white,
+          labelStyle: const TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold
+          ),
           controller: _tabController,
           tabs: const [
             Tab(text: "Bichos"),
