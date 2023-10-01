@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 class BichosPagina extends StatefulWidget {
@@ -8,6 +9,15 @@ class BichosPagina extends StatefulWidget {
 }
 
 class _BichosPaginaState extends State<BichosPagina> {
+
+  final audioPlayer = AudioPlayer();
+
+  _executarAudio(String nomeAudio) async {
+
+    await audioPlayer.play(AssetSource("audios/$nomeAudio.mp3"));
+
+  }
+
   @override
   Widget build(BuildContext context) {
 
@@ -19,27 +29,39 @@ class _BichosPaginaState extends State<BichosPagina> {
       childAspectRatio: MediaQuery.of(context).size.aspectRatio * 2,
       children: [
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            _executarAudio("cao");
+          },
           child: Image.asset("assets/images/cao.png"),
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            _executarAudio("gato");
+          },
           child: Image.asset("assets/images/gato.png"),
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            _executarAudio("leao");
+          },
           child: Image.asset("assets/images/leao.png"),
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            _executarAudio("macaco");
+          },
           child: Image.asset("assets/images/macaco.png"),
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            _executarAudio("ovelha");
+          },
           child: Image.asset("assets/images/ovelha.png"),
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            _executarAudio("vaca");
+          },
           child: Image.asset("assets/images/vaca.png"),
         )
       ],
